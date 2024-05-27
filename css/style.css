@@ -1,0 +1,486 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Single Day', cursive;
+
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+
+}
+
+header {
+    height: 80px;
+    background-color: rgb(132, 195, 136);
+    padding: 15px 0px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-content .brand {
+    font-size: 32px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+
+}
+
+.header-content .brand:hover {
+    opacity: 0.8;
+}
+
+nav ul {
+    margin-top: 5px;
+    display: flex;
+    list-style: none;
+    font-size: 21px;
+}
+
+nav li a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    min-width: 80px;
+    padding: 7px;
+    margin: 0 7px;
+}
+
+nav li a:hover {
+    opacity: 0.5;
+}
+
+nav #user_info {
+    display: none;
+}
+
+/***********************************  user Info & badge ****************************/
+
+nav ul#user_info li i {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: 13px;
+
+}
+
+nav ul#user_info li {
+    margin: 0px 20px;
+    position: relative;
+}
+
+nav ul#user_info #user {
+    margin-right: 20vw;
+}
+
+.carts_products {
+    position: absolute;
+    z-index: 1;
+    color: rgb(0, 0, 0);
+    width: 320px;
+    border: 1px solid lightgray;
+    right: -150;
+    top: 59px;
+    text-align: center;
+    background-color: rgb(132, 195, 136, 0.6);
+    display: none;
+}
+
+.carts_products a {
+    color: black;
+    text-decoration: overline;
+
+}
+
+nav ul#user_info li .badge {
+    position: absolute;
+    width: 18px;
+    height: 22px;
+    background-color: red;
+    border-radius: 50%;
+    font-size: 13px;
+    display: none;
+    top: 3;
+    right: -8;
+    color: white;
+    text-align: center;
+}
+
+.carts_products div .product-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+}
+
+.product-info .itemName,
+.addOrRemove {
+    height: 40px;
+    padding: 0 10px;
+}
+
+.product-info:hover {
+    background-color: rgb(132, 195, 136);
+
+}
+
+.product-info .addOrRemove .number {
+    font-size: 26px;
+}
+
+.product-info .addOrRemove i {
+    margin: 0 10px;
+
+}
+
+.plus {
+    cursor: pointer;
+
+    color: green !important;
+
+}
+
+.minus {
+    cursor: pointer;
+    color: red !important;
+
+}
+
+
+.add_to_cart {
+    width: 100px;
+    background-color: rgb(132, 195, 136, 0.5);
+    height: 22px;
+    border: none;
+    font-weight: 500;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1)
+}
+
+.removeFromCart {
+    width: 150px;
+    background-color: rgb(173, 70, 70);
+    height: 22px;
+    border: none;
+    font-weight: 500;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1)
+}
+
+/********************************* Search ***********************************/
+
+.search {
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 60px;
+}
+
+.dropdown {
+    padding-left: 15px;
+    width: 45%;
+    margin-right: 25px;
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+}
+
+.line {
+    margin-top: 40px;
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: lightgray;
+}
+
+/*********************************  product   ********************************/
+
+.products {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.product_item {
+    margin-top: 35px;
+    border: solid 1px #c9c4c4;
+    height: 450px;
+    width: 350px;
+    padding-left: 22px;
+    border-radius: 15px;
+    
+}
+
+.product_item:hover {
+    scale: 1.05;
+}
+
+.product_item_img {
+    width: 300px;
+    height: 320px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1)
+}
+
+.product_item_action i {
+    float: right;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+
+.product_item_action {
+    padding-top: 15px;
+
+}
+
+.fav {
+    cursor: pointer;
+    color: rgb(114, 114, 114);
+}
+
+.favRed {
+    cursor: pointer;
+    color: rgb(173, 70, 70);
+}
+
+/***************************************  Favorite   **********************/
+
+.fav_item_img {
+    width: 300px;
+    height: 300px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+.swiper_header{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 35px;
+
+}
+.swiper_line{
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color: #c63535;
+    margin: auto;
+    transition: 0.5s;
+}
+.headerFav:hover .swiper_line{
+    width: 130px;
+}
+.swiper-wrapper{
+    width: 100% !important;
+    height: 380px !important;
+    padding-top: 20px;
+}
+.swiper-container{
+    width: 80%;
+    height: 500px;
+    margin: 25px auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.favIcons{
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    font-size: 30px;
+}
+.swiper-slide{
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 18px;
+    background: #ededed;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+.swiper-slide:hover{
+    scale: 1.05;
+}
+
+/**************************************All Products************************************/
+
+
+
+.productsAll {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.product_itemAll {
+    margin-top: 35px;
+    border: solid 1px #c9c4c4;
+    height: 250px;
+    width: 550px;
+    padding-left: 22px;
+    border-radius: 15px;
+    line-height: 35px;
+    background: #ededed;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2)
+
+
+}
+
+.product_itemAll:hover {
+    scale: 1.05;
+}
+
+.product_item_actionAll i:hover,
+.product_item_actionAll button:hover {
+    scale: 1.05;
+}
+
+.product_item_actionAll button {
+    width: 100px;
+    background-color: rgb(173, 70, 70);
+    height: 22px;
+    border: none;
+    font-weight: 500;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1)
+}
+
+.product_item_actionAll i {
+    padding: 0 10px;
+}
+
+.product_item_actionAll {
+    font-size: 20px;
+    margin-top: 40px;
+
+}
+
+.product_item_imgAll {
+    float: left;
+    width: 250px;
+    height: 220px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    margin-right: 40px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.product_item_descAll {
+    margin: 35px 0;
+}
+
+.total {
+    margin-top: 60px;
+    text-align: center;
+}
+
+/************************************    Login   ***************************************/
+
+.section-form {
+    border: solid 1px #c9c4c4;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    width: 60vw;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: rgba(167, 189, 169, 0.1);
+
+}
+
+.sign-form {
+    padding-left: 20px;
+}
+
+.sign {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.sign input {
+    height: 32px;
+    border: 1px solid #ddd;
+    outline: none;
+    padding-left: 10px;
+    box-shadow: none;
+}
+
+.sign label {
+    width: 80px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.sign input {
+    width: 85%;
+    border-radius: 15px;
+}
+
+.linkBtn {
+
+    width: 100px;
+    height: 35px;
+    background-color: rgb(132, 195, 136);
+    border: none;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+}
+
+.linkBtn:hover {
+    background-color: rgb(132, 195, 136, 0.7);
+}
+
+.regLog {
+    text-align: left;
+    color: #8b8a8a;
+
+}
+
+.regLog a {
+    text-decoration: none;
+
+}
+
+/************************* register **********/
+.firstName {
+    display: inline;
+    float: left;
+
+}
+
+.lastName {
+    display: inline-block;
+
+}
+
+.name label {
+    width: 80px;
+    font-weight: 600;
+    text-align: left;
+    margin-right: 5px;
+}
+
+.name input {
+    width: 72%;
+    border-radius: 15px;
+
+    outline: none;
+    padding-left: 10px;
+    box-shadow: none;
+    border: 1px solid #ddd;
+
+}
+
+.linkReg:hover {
+    color: rgb(132, 195, 136);
+
+}
